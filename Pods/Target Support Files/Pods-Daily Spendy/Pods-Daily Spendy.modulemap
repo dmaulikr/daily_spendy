@@ -1,0 +1,6 @@
+framework module Pods_Daily_Spendy {
+  umbrella header "Pods-Daily Spendy-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		383DD3061F1C555600BAEC3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383DD3051F1C555600BAEC3A /* AppDelegate.swift */; };
-		383DD3081F1C555600BAEC3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383DD3071F1C555600BAEC3A /* ViewController.swift */; };
 		383DD30B1F1C555600BAEC3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383DD3091F1C555600BAEC3A /* Main.storyboard */; };
 		383DD30E1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 383DD30C1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld */; };
 		383DD3101F1C555600BAEC3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383DD30F1F1C555600BAEC3A /* Assets.xcassets */; };
 		383DD3131F1C555600BAEC3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383DD3111F1C555600BAEC3A /* LaunchScreen.storyboard */; };
+		EAB0F3698255FCDF1D8FC0EC /* Pods_Daily_Spendy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECDACFBA535DD2BC1DEE837 /* Pods_Daily_Spendy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2747331DFFE2FC1E48A590F9 /* Pods-Daily Spendy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Spendy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Spendy/Pods-Daily Spendy.debug.xcconfig"; sourceTree = "<group>"; };
 		383DD3021F1C555600BAEC3A /* Daily Spendy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Spendy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		383DD3051F1C555600BAEC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		383DD3071F1C555600BAEC3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		383DD3051F1C555600BAEC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		383DD30A1F1C555600BAEC3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		383DD30D1F1C555600BAEC3A /* Daily_Spendy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Daily_Spendy.xcdatamodel; sourceTree = "<group>"; };
-		383DD30F1F1C555600BAEC3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		383DD30F1F1C555600BAEC3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		383DD3121F1C555600BAEC3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		383DD3141F1C555600BAEC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383DD3141F1C555600BAEC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		7E855BB24D75CC7396E7EB3D /* Pods-Daily Spendy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Spendy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Spendy/Pods-Daily Spendy.release.xcconfig"; sourceTree = "<group>"; };
+		EECDACFBA535DD2BC1DEE837 /* Pods_Daily_Spendy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Spendy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB0F3698255FCDF1D8FC0EC /* Pods_Daily_Spendy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146676E0DA354799BFB14429 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EECDACFBA535DD2BC1DEE837 /* Pods_Daily_Spendy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		383DD2F91F1C555500BAEC3A = {
 			isa = PBXGroup;
 			children = (
 				383DD3041F1C555600BAEC3A /* Daily Spendy */,
 				383DD3031F1C555600BAEC3A /* Products */,
+				F5B403AC04CD0DAB8B2253CE /* Pods */,
+				146676E0DA354799BFB14429 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,71 @@
 		383DD3041F1C555600BAEC3A /* Daily Spendy */ = {
 			isa = PBXGroup;
 			children = (
-				383DD3051F1C555600BAEC3A /* AppDelegate.swift */,
-				383DD3071F1C555600BAEC3A /* ViewController.swift */,
+				38BD0D031F1C566C002962B3 /* Layouts */,
+				38BD0D041F1C566C002962B3 /* Repositories */,
+				38BD0D051F1C566C002962B3 /* Models */,
+				38BD0D061F1C566C002962B3 /* View Controllers */,
+				38BD0D071F1C566C002962B3 /* Helpers */,
+				38BD0D081F1C566C002962B3 /* Others */,
+			);
+			path = "Daily Spendy";
+			sourceTree = "<group>";
+		};
+		38BD0D031F1C566C002962B3 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
 				383DD3091F1C555600BAEC3A /* Main.storyboard */,
-				383DD30F1F1C555600BAEC3A /* Assets.xcassets */,
 				383DD3111F1C555600BAEC3A /* LaunchScreen.storyboard */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		38BD0D041F1C566C002962B3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		38BD0D051F1C566C002962B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38BD0D061F1C566C002962B3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		38BD0D071F1C566C002962B3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		38BD0D081F1C566C002962B3 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				383DD3051F1C555600BAEC3A /* AppDelegate.swift */,
+				383DD30F1F1C555600BAEC3A /* Assets.xcassets */,
 				383DD3141F1C555600BAEC3A /* Info.plist */,
 				383DD30C1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld */,
 			);
-			path = "Daily Spendy";
+			path = Others;
+			sourceTree = "<group>";
+		};
+		F5B403AC04CD0DAB8B2253CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2747331DFFE2FC1E48A590F9 /* Pods-Daily Spendy.debug.xcconfig */,
+				7E855BB24D75CC7396E7EB3D /* Pods-Daily Spendy.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 383DD3171F1C555600BAEC3A /* Build configuration list for PBXNativeTarget "Daily Spendy" */;
 			buildPhases = (
+				47E4D800F23C05AA42967ECA /* [CP] Check Pods Manifest.lock */,
 				383DD2FE1F1C555600BAEC3A /* Sources */,
 				383DD2FF1F1C555600BAEC3A /* Frameworks */,
 				383DD3001F1C555600BAEC3A /* Resources */,
+				C131F73DA752FFB4FB1B6EF1 /* [CP] Embed Pods Frameworks */,
+				0D5936E8EA1E37E94628A70A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,12 +207,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D5936E8EA1E37E94628A70A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Spendy/Pods-Daily Spendy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47E4D800F23C05AA42967ECA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C131F73DA752FFB4FB1B6EF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Spendy/Pods-Daily Spendy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		383DD2FE1F1C555600BAEC3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				383DD3081F1C555600BAEC3A /* ViewController.swift in Sources */,
 				383DD3061F1C555600BAEC3A /* AppDelegate.swift in Sources */,
 				383DD30E1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld in Sources */,
 			);
@@ -155,6 +274,7 @@
 				383DD30A1F1C555600BAEC3A /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		383DD3111F1C555600BAEC3A /* LaunchScreen.storyboard */ = {
@@ -163,6 +283,7 @@
 				383DD3121F1C555600BAEC3A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -263,10 +384,12 @@
 		};
 		383DD3181F1C555600BAEC3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2747331DFFE2FC1E48A590F9 /* Pods-Daily Spendy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LWGNF97J5S;
 				INFOPLIST_FILE = "Daily Spendy/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tqloc0311.Daily-Spendy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,10 +399,12 @@
 		};
 		383DD3191F1C555600BAEC3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E855BB24D75CC7396E7EB3D /* Pods-Daily Spendy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LWGNF97J5S;
 				INFOPLIST_FILE = "Daily Spendy/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tqloc0311.Daily-Spendy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +431,7 @@
 				383DD3191F1C555600BAEC3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -316,7 +442,8 @@
 				383DD30D1F1C555600BAEC3A /* Daily_Spendy.xcdatamodel */,
 			);
 			currentVersion = 383DD30D1F1C555600BAEC3A /* Daily_Spendy.xcdatamodel */;
-			path = Daily_Spendy.xcdatamodeld;
+			name = Daily_Spendy.xcdatamodeld;
+			path = ../Daily_Spendy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
