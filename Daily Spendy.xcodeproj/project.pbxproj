@@ -12,6 +12,29 @@
 		383DD30E1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 383DD30C1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld */; };
 		383DD3101F1C555600BAEC3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383DD30F1F1C555600BAEC3A /* Assets.xcassets */; };
 		383DD3131F1C555600BAEC3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383DD3111F1C555600BAEC3A /* LaunchScreen.storyboard */; };
+		387E1C111F1CB3B800DE76D4 /* SelectMonthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E1C101F1CB3B800DE76D4 /* SelectMonthTableViewController.swift */; };
+		388D5D811F1DA1130089DF92 /* SelectYearTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D801F1DA1130089DF92 /* SelectYearTableViewController.swift */; };
+		388D5D831F1DC3D50089DF92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D821F1DC3D50089DF92 /* Extensions.swift */; };
+		388D5D851F1DC6630089DF92 /* Spendy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D841F1DC6630089DF92 /* Spendy.swift */; };
+		388D5D871F1DC68F0089DF92 /* SpendyRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D861F1DC68F0089DF92 /* SpendyRepo.swift */; };
+		388D5D891F1DD9750089DF92 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D881F1DD9750089DF92 /* Group.swift */; };
+		388D5D8B1F1DDD250089DF92 /* GroupRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D8A1F1DDD250089DF92 /* GroupRepo.swift */; };
+		388D5D8D1F1DDD830089DF92 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D8C1F1DDD830089DF92 /* Common.swift */; };
+		388D5D8F1F1DDFA80089DF92 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D8E1F1DDFA80089DF92 /* GroupTableViewController.swift */; };
+		388D5D911F1DF92D0089DF92 /* SpendyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D901F1DF92D0089DF92 /* SpendyTableViewController.swift */; };
+		388D5D931F1DF94D0089DF92 /* SpendyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D921F1DF94D0089DF92 /* SpendyDetailViewController.swift */; };
+		388D5D951F1DF99F0089DF92 /* SpendyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D941F1DF99F0089DF92 /* SpendyTableViewCell.swift */; };
+		388D5D971F1DF9B10089DF92 /* SpendyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 388D5D961F1DF9B10089DF92 /* SpendyTableViewCell.xib */; };
+		388D5DA51F1E0E970089DF92 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D9B1F1E0E970089DF92 /* DPDConstants.swift */; };
+		388D5DA61F1E0E970089DF92 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D9C1F1E0E970089DF92 /* DPDKeyboardListener.swift */; };
+		388D5DA71F1E0E970089DF92 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5D9D1F1E0E970089DF92 /* DPDUIView+Extension.swift */; };
+		388D5DA81F1E0E970089DF92 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 388D5D9E1F1E0E970089DF92 /* Info.plist */; };
+		388D5DA91F1E0E970089DF92 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 388D5DA01F1E0E970089DF92 /* DropDownCell.xib */; };
+		388D5DAA1F1E0E970089DF92 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA21F1E0E970089DF92 /* DropDown+Appearance.swift */; };
+		388D5DAB1F1E0E970089DF92 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA31F1E0E970089DF92 /* DropDown.swift */; };
+		388D5DAC1F1E0E970089DF92 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA41F1E0E970089DF92 /* DropDownCell.swift */; };
+		38BD0D0A1F1C5759002962B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD0D091F1C5759002962B3 /* MainViewController.swift */; };
+		38BD0D0D1F1C57F0002962B3 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD0D0C1F1C57F0002962B3 /* CalendarCell.swift */; };
 		EAB0F3698255FCDF1D8FC0EC /* Pods_Daily_Spendy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECDACFBA535DD2BC1DEE837 /* Pods_Daily_Spendy.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +47,30 @@
 		383DD30F1F1C555600BAEC3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		383DD3121F1C555600BAEC3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		383DD3141F1C555600BAEC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		387E1C101F1CB3B800DE76D4 /* SelectMonthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMonthTableViewController.swift; sourceTree = "<group>"; };
+		388D5D801F1DA1130089DF92 /* SelectYearTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectYearTableViewController.swift; sourceTree = "<group>"; };
+		388D5D821F1DC3D50089DF92 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		388D5D841F1DC6630089DF92 /* Spendy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spendy.swift; sourceTree = "<group>"; };
+		388D5D861F1DC68F0089DF92 /* SpendyRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendyRepo.swift; sourceTree = "<group>"; };
+		388D5D881F1DD9750089DF92 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		388D5D8A1F1DDD250089DF92 /* GroupRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupRepo.swift; sourceTree = "<group>"; };
+		388D5D8C1F1DDD830089DF92 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		388D5D8E1F1DDFA80089DF92 /* GroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
+		388D5D901F1DF92D0089DF92 /* SpendyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendyTableViewController.swift; sourceTree = "<group>"; };
+		388D5D921F1DF94D0089DF92 /* SpendyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendyDetailViewController.swift; sourceTree = "<group>"; };
+		388D5D941F1DF99F0089DF92 /* SpendyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendyTableViewCell.swift; sourceTree = "<group>"; };
+		388D5D961F1DF9B10089DF92 /* SpendyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpendyTableViewCell.xib; sourceTree = "<group>"; };
+		388D5D991F1E0E970089DF92 /* DropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDown.h; sourceTree = "<group>"; };
+		388D5D9B1F1E0E970089DF92 /* DPDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDConstants.swift; sourceTree = "<group>"; };
+		388D5D9C1F1E0E970089DF92 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		388D5D9D1F1E0E970089DF92 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		388D5D9E1F1E0E970089DF92 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388D5DA01F1E0E970089DF92 /* DropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
+		388D5DA21F1E0E970089DF92 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		388D5DA31F1E0E970089DF92 /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
+		388D5DA41F1E0E970089DF92 /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
+		38BD0D091F1C5759002962B3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		38BD0D0C1F1C57F0002962B3 /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		7E855BB24D75CC7396E7EB3D /* Pods-Daily Spendy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Spendy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Spendy/Pods-Daily Spendy.release.xcconfig"; sourceTree = "<group>"; };
 		EECDACFBA535DD2BC1DEE837 /* Pods_Daily_Spendy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Spendy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +126,46 @@
 			path = "Daily Spendy";
 			sourceTree = "<group>";
 		};
+		388D5D981F1E0E970089DF92 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				388D5D991F1E0E970089DF92 /* DropDown.h */,
+				388D5D9A1F1E0E970089DF92 /* helpers */,
+				388D5D9E1F1E0E970089DF92 /* Info.plist */,
+				388D5D9F1F1E0E970089DF92 /* resources */,
+				388D5DA11F1E0E970089DF92 /* src */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		388D5D9A1F1E0E970089DF92 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				388D5D9B1F1E0E970089DF92 /* DPDConstants.swift */,
+				388D5D9C1F1E0E970089DF92 /* DPDKeyboardListener.swift */,
+				388D5D9D1F1E0E970089DF92 /* DPDUIView+Extension.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		388D5D9F1F1E0E970089DF92 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				388D5DA01F1E0E970089DF92 /* DropDownCell.xib */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		388D5DA11F1E0E970089DF92 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				388D5DA21F1E0E970089DF92 /* DropDown+Appearance.swift */,
+				388D5DA31F1E0E970089DF92 /* DropDown.swift */,
+				388D5DA41F1E0E970089DF92 /* DropDownCell.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		38BD0D031F1C566C002962B3 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +178,8 @@
 		38BD0D041F1C566C002962B3 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				388D5D861F1DC68F0089DF92 /* SpendyRepo.swift */,
+				388D5D8A1F1DDD250089DF92 /* GroupRepo.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -98,6 +187,8 @@
 		38BD0D051F1C566C002962B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				388D5D841F1DC6630089DF92 /* Spendy.swift */,
+				388D5D881F1DD9750089DF92 /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +196,13 @@
 		38BD0D061F1C566C002962B3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38BD0D0B1F1C57D4002962B3 /* Cells */,
+				38BD0D091F1C5759002962B3 /* MainViewController.swift */,
+				387E1C101F1CB3B800DE76D4 /* SelectMonthTableViewController.swift */,
+				388D5D801F1DA1130089DF92 /* SelectYearTableViewController.swift */,
+				388D5D8E1F1DDFA80089DF92 /* GroupTableViewController.swift */,
+				388D5D901F1DF92D0089DF92 /* SpendyTableViewController.swift */,
+				388D5D921F1DF94D0089DF92 /* SpendyDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -112,6 +210,8 @@
 		38BD0D071F1C566C002962B3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				388D5D821F1DC3D50089DF92 /* Extensions.swift */,
+				388D5D8C1F1DDD830089DF92 /* Common.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -119,12 +219,23 @@
 		38BD0D081F1C566C002962B3 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				388D5D981F1E0E970089DF92 /* DropDown */,
 				383DD3051F1C555600BAEC3A /* AppDelegate.swift */,
 				383DD30F1F1C555600BAEC3A /* Assets.xcassets */,
 				383DD3141F1C555600BAEC3A /* Info.plist */,
 				383DD30C1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		38BD0D0B1F1C57D4002962B3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				38BD0D0C1F1C57F0002962B3 /* CalendarCell.swift */,
+				388D5D941F1DF99F0089DF92 /* SpendyTableViewCell.swift */,
+				388D5D961F1DF9B10089DF92 /* SpendyTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F5B403AC04CD0DAB8B2253CE /* Pods */ = {
@@ -199,8 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388D5DA91F1E0E970089DF92 /* DropDownCell.xib in Resources */,
 				383DD3131F1C555600BAEC3A /* LaunchScreen.storyboard in Resources */,
 				383DD3101F1C555600BAEC3A /* Assets.xcassets in Resources */,
+				388D5D971F1DF9B10089DF92 /* SpendyTableViewCell.xib in Resources */,
+				388D5DA81F1E0E970089DF92 /* Info.plist in Resources */,
 				383DD30B1F1C555600BAEC3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,8 +374,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388D5DAC1F1E0E970089DF92 /* DropDownCell.swift in Sources */,
+				388D5D811F1DA1130089DF92 /* SelectYearTableViewController.swift in Sources */,
+				38BD0D0A1F1C5759002962B3 /* MainViewController.swift in Sources */,
+				388D5DA71F1E0E970089DF92 /* DPDUIView+Extension.swift in Sources */,
+				388D5D8B1F1DDD250089DF92 /* GroupRepo.swift in Sources */,
+				388D5DA61F1E0E970089DF92 /* DPDKeyboardListener.swift in Sources */,
+				388D5DAB1F1E0E970089DF92 /* DropDown.swift in Sources */,
+				388D5D931F1DF94D0089DF92 /* SpendyDetailViewController.swift in Sources */,
+				388D5D851F1DC6630089DF92 /* Spendy.swift in Sources */,
+				388D5D8D1F1DDD830089DF92 /* Common.swift in Sources */,
+				388D5DAA1F1E0E970089DF92 /* DropDown+Appearance.swift in Sources */,
+				388D5D891F1DD9750089DF92 /* Group.swift in Sources */,
 				383DD3061F1C555600BAEC3A /* AppDelegate.swift in Sources */,
 				383DD30E1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld in Sources */,
+				387E1C111F1CB3B800DE76D4 /* SelectMonthTableViewController.swift in Sources */,
+				388D5D951F1DF99F0089DF92 /* SpendyTableViewCell.swift in Sources */,
+				388D5DA51F1E0E970089DF92 /* DPDConstants.swift in Sources */,
+				388D5D871F1DC68F0089DF92 /* SpendyRepo.swift in Sources */,
+				38BD0D0D1F1C57F0002962B3 /* CalendarCell.swift in Sources */,
+				388D5D8F1F1DDFA80089DF92 /* GroupTableViewController.swift in Sources */,
+				388D5D911F1DF92D0089DF92 /* SpendyTableViewController.swift in Sources */,
+				388D5D831F1DC3D50089DF92 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

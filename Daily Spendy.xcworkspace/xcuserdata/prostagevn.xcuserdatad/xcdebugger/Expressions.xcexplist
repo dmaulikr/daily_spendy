@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "MainViewController.(calendar(JTAppleCalendarView, cellForItemAt : Date, cellState : CellState, indexPath : IndexPath) -&gt; JTAppleCell).(closure #1):MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.viewCurrent.isHidden">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.calendar(JTAppleCalendarView, cellForItemAt : Date, cellState : CellState, indexPath : IndexPath) -&gt; JTAppleCell:MainViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

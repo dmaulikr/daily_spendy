@@ -6,5 +6,5 @@ target 'Daily Spendy' do
   use_frameworks!
 
   # Pods for Daily Spendy
-
+  pod 'JTAppleCalendar'
 end
