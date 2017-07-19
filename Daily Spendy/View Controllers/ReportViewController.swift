@@ -8,6 +8,12 @@
 
 import UIKit
 
+class SpendySection {
+    var index = 0
+    var title = ""
+    var spendies = [Spendy]()
+}
+
 class ReportViewController: UIViewController {
 
     // Constants
@@ -21,10 +27,36 @@ class ReportViewController: UIViewController {
     var selectedTypeIndex = 0
     var fromDate = Date()
     var toDate = Date()
-    var dataSource = [Spendy]()
+    var spendySections = [SpendySection]()
+    
+    var start = 0 {
+        didSet {
+            lblStartMoney.text = "\(start.toMoney(""))"
+        }
+    }
+    
+    var end = 0 {
+        didSet {
+            lblEndMoney.text = "\(end.toMoney(""))"
+        }
+    }
+    
+    var incoming = 0 {
+        didSet {
+            lblIncoming.text = "\(incoming.toMoney(""))"
+        }
+    }
+    
+    var outgoing = 0 {
+        didSet {
+            lblOutgoing.text = "\(outgoing.toMoney(""))"
+        }
+    }
     
     // Outlets
+    @IBOutlet weak var viewTop: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var viewBottom: UIView!
     @IBOutlet weak var lblStartMoney: UILabel!
     @IBOutlet weak var lblEndMoney: UILabel!
     @IBOutlet weak var lblIncoming: UILabel!
@@ -68,9 +100,11 @@ class ReportViewController: UIViewController {
                 self.txtGroup.text = "Tất cả"
             }
             else {
-                self.selectedGroupIndex = index
+                self.selectedGroupIndex = index-1
                 self.txtGroup.text = GroupRepo.shared.list[index-1].name
             }
+            
+            self.loadData(groupIndex: self.selectedGroupIndex, typeIndex: self.selectedTypeIndex)
         }
         dropDownGroup.dismissMode = .automatic
         dropDownGroup.direction = .any
@@ -86,6 +120,7 @@ class ReportViewController: UIViewController {
         dropDownType.selectionAction = { [unowned self] (index, item) in
             self.selectedTypeIndex = index
             self.txtType.text = dsType[index]
+            self.loadData(groupIndex: self.selectedGroupIndex, typeIndex: self.selectedTypeIndex)
         }
         dropDownType.dismissMode = .automatic
         dropDownType.direction = .any
@@ -99,14 +134,59 @@ class ReportViewController: UIViewController {
         dropDownType.show()
     }
     
-    func loadData() {
-        dataSource = SpendyRepo.shared.list.filter({
+    func loadData(groupIndex: Int = -1, typeIndex: Int = 0) {
+        let dataSource = SpendyRepo.shared.list.filter({
             let itemDate = ($0.date! as Date).startOfDate()
             return (itemDate.isEqualDate(self.fromDate) ||
                 itemDate.isGreaterThanDate(self.fromDate)) &&
                 (itemDate.isEqualDate(self.toDate) ||
                 itemDate.isLessThanDate(self.toDate))
         })
+        
+        let earlyData = SpendyRepo.shared.list.filter({
+            let itemDate = ($0.date! as Date).startOfDate()
+            return itemDate.isLessThanDate(self.fromDate)
+        })
+
+        start = 0
+        for item in earlyData {
+            start += Int(item.money)
+        }
+        
+        incoming = 0
+        outgoing = 0
+        spendySections.removeAll()
+        var sectionIndex = 0
+        for item in dataSource {
+            if item.money > 0 {
+                incoming += Int(item.money)
+            }
+            else {
+                outgoing -= Int(item.money)
+            }
+            
+            if (groupIndex == -1 || GroupRepo.shared.list[groupIndex].id == item.groupID) {
+                if typeIndex == 0 || (typeIndex == 1 && item.money > 0) || (typeIndex == 2 && item.money < 0) {
+                    let curTitle = (item.date! as Date).toString(withFormat: "dd / MM / yyyy")
+                    var curSection = SpendySection()
+                    if let section = spendySections.first(where: { $0.title == curTitle }) {
+                        curSection = section
+                    }
+                    else {
+                        curSection.index = sectionIndex
+                        curSection.title = curTitle
+                        spendySections.append(curSection)
+                        sectionIndex += 1
+                    }
+                    
+                    curSection.spendies.append(item)
+                }
+            }
+        }
+        
+        end = start + incoming - outgoing
+        
+        tableView.reloadData()
     }
     
     // Navigation
@@ -139,11 +219,22 @@ class ReportViewController: UIViewController {
         loadData()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        viewTop.layer.borderWidth = 1
+        viewBottom.layer.borderWidth = 1
+        tableView.layer.borderWidth = 1
+        
+        viewTop.layer.cornerRadius = 10
+        viewBottom.layer.cornerRadius = 10
+        tableView.layer.cornerRadius = 10
+    }
 }
 
 extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if dataSource.count == 0 {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if spendySections.count == 0 {
             let view = UIView.loadFromNibNamed("NoDataView")!
             view.frame = tableView.frame
             view.tag = 999
@@ -156,13 +247,27 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
-        return dataSource.count
+        return spendySections.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return spendySections[section].spendies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SpendyTableViewCell
-        let spendy = dataSource[indexPath.row]
+        let spendy = spendySections[indexPath.section].spendies[indexPath.row]
         cell.setData(spendy)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return spendySections[section].title
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.tintColor = (0x1b4aa6).toUIColor()
+        header.textLabel?.textColor = UIColor.white
     }
 }

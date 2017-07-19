@@ -49,6 +49,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var lblEndMoney: UILabel!
     @IBOutlet weak var lblIncoming: UILabel!
     @IBOutlet weak var lblOutgoing: UILabel!
+    @IBOutlet weak var btnToday: UIButton!
     
     // Actions
     @IBAction func today(_ sender: Any) {
@@ -246,5 +247,12 @@ extension MainViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDa
         }
         
         lblMonth.text = monthStr
+        
+        if month == Date().getMonth() {
+            btnToday.isEnabled = false
+        }
+        else {
+            btnToday.isEnabled = true
+        }
     }
 }

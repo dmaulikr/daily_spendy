@@ -12,48 +12,48 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="spendyCell" rowHeight="93" id="8Si-gK-8n4" customClass="SpendyTableViewCell" customModule="Daily_Spendy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="420" height="93"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="spendyCell" rowHeight="88" id="8Si-gK-8n4" customClass="SpendyTableViewCell" customModule="Daily_Spendy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="88"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Si-gK-8n4" id="lm1-Gb-9tD">
-                <rect key="frame" x="0.0" y="0.0" width="382" height="92.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="382" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdR-Nw-4FT">
-                        <rect key="frame" x="8" y="8" width="243" height="35.5"/>
-                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                        <rect key="frame" x="24" y="8" width="227" height="28.5"/>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-999.999.999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khq-WV-e4U">
-                        <rect key="frame" x="259" y="8" width="120" height="25"/>
+                        <rect key="frame" x="259" y="8" width="120" height="23"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="sNu-sJ-GOq"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3r-x2-gbs">
-                        <rect key="frame" x="8" y="51" width="243" height="31.5"/>
-                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                        <rect key="frame" x="24" y="44" width="227" height="25.5"/>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
                         <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-12-2Ml">
-                        <rect key="frame" x="338" y="58" width="41" height="24.5"/>
-                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
+                        <rect key="frame" x="342.5" y="48" width="36.5" height="21.5"/>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="15"/>
                         <color key="textColor" red="1" green="0.70873802902977834" blue="0.19501138459225575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="KdR-Nw-4FT" firstAttribute="leading" secondItem="lm1-Gb-9tD" secondAttribute="leadingMargin" id="3rm-EV-c92"/>
+                    <constraint firstItem="KdR-Nw-4FT" firstAttribute="leading" secondItem="lm1-Gb-9tD" secondAttribute="leadingMargin" constant="16" id="3rm-EV-c92"/>
                     <constraint firstItem="W3r-x2-gbs" firstAttribute="leading" secondItem="KdR-Nw-4FT" secondAttribute="leading" id="5vV-5W-BOf"/>
                     <constraint firstItem="KdR-Nw-4FT" firstAttribute="top" secondItem="lm1-Gb-9tD" secondAttribute="topMargin" id="6fe-MX-j1K"/>
                     <constraint firstItem="khq-WV-e4U" firstAttribute="leading" secondItem="KdR-Nw-4FT" secondAttribute="trailing" constant="8" id="C69-MF-Nk1"/>
                     <constraint firstItem="W3r-x2-gbs" firstAttribute="trailing" secondItem="KdR-Nw-4FT" secondAttribute="trailing" id="TnG-o0-STE"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="W3r-x2-gbs" secondAttribute="bottom" constant="2" id="aBh-dA-YNw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="W3r-x2-gbs" secondAttribute="bottom" constant="10" id="fao-5v-VLB"/>
                     <constraint firstItem="khq-WV-e4U" firstAttribute="top" secondItem="lm1-Gb-9tD" secondAttribute="topMargin" id="kS0-KB-dpf"/>
                     <constraint firstItem="ffM-12-2Ml" firstAttribute="trailing" secondItem="khq-WV-e4U" secondAttribute="trailing" id="lua-EA-Zcp"/>
                     <constraint firstItem="ffM-12-2Ml" firstAttribute="bottom" secondItem="W3r-x2-gbs" secondAttribute="bottom" id="n7J-gH-14c"/>
@@ -67,7 +67,7 @@
                 <outlet property="lblName" destination="KdR-Nw-4FT" id="Ewh-CA-n64"/>
                 <outlet property="lblTime" destination="ffM-12-2Ml" id="sIO-yR-lLY"/>
             </connections>
-            <point key="canvasLocation" x="48" y="76.5"/>
+            <point key="canvasLocation" x="48" y="74"/>
         </tableViewCell>
     </objects>
 </document>

@@ -26,6 +26,9 @@ class FilterViewController: UIViewController {
         performSegue(withIdentifier: "report", sender: self)
     }
     
+    @IBAction func back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     // Methods
     func viewFromTapped() {
         let dtp = DatePickerDialog()
@@ -40,7 +43,8 @@ class FilterViewController: UIViewController {
     func viewToTapped() {
         let dtp = DatePickerDialog()
         let defaultDate = Date(dateString: txtTo.text ?? "", format: dateFormat)
-        dtp.show(title: "Đến ngày", doneButtonTitle: "OK", cancelButtonTitle: "Quay lại", defaultDate: defaultDate, minimumDate: nil, maximumDate: nil, datePickerMode: .date) { (selected) in
+        let minDate = Date(dateString: txtFrom.text ?? "", format: dateFormat)
+        dtp.show(title: "Đến ngày", doneButtonTitle: "OK", cancelButtonTitle: "Quay lại", defaultDate: defaultDate, minimumDate: minDate, maximumDate: nil, datePickerMode: .date) { (selected) in
             if let selected = selected {
                 self.txtTo.text = selected.toString(withFormat: self.dateFormat)
             }
