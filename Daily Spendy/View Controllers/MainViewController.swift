@@ -88,7 +88,14 @@ class MainViewController: UIViewController {
     
     func handleCellSelected(view: JTAppleCell?, cellState: CellState) {
         guard let validCell = view as? CalendarCell else { return }
-        validCell.viewCurrent.isHidden = !validCell.isSelected
+        validCell.imgvCurrent.isHidden = !validCell.isSelected
+    }
+    
+    func showMoneyInfo(_ cell: CalendarCell) {
+        lblStartMoney.text = cell.start.toMoney("")
+        lblIncoming.text = cell.incoming.toMoney("")
+        lblOutgoing.text = cell.outgoing.toMoney("")
+        lblEndMoney.text = cell.end.toMoney("")
     }
     
     // Navigation
@@ -154,13 +161,17 @@ extension MainViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDa
             cell.alpha = 0.5
         }
         
-        if Calendar.current.compare(Date(), to: cell.date, toGranularity: .day) == .orderedSame {
+        if Date().startOfDate().isEqualDate(cell.date.startOfDate()) {
             cell.isToday = true
         }
+        else {
+            cell.isToday = false
+        }
         
-        cell.viewCurrent.isHidden = true
-        if Calendar.current.compare(selectedDate, to: cell.date, toGranularity: .day) == .orderedSame {
-            cell.viewCurrent.isHidden = false
+        cell.imgvCurrent.isHidden = true
+        if selectedDate.startOfDate().isEqualDate(cell.date.startOfDate()) {
+            cell.imgvCurrent.isHidden = false
+            showMoneyInfo(cell)
         }
         
         return cell
@@ -168,7 +179,7 @@ extension MainViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDa
     
     func calendar(_ calendar: JTAppleCalendarView, shouldDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) -> Bool {
         guard let cell = cell as? CalendarCell else { return true }
-        cell.viewCurrent.isHidden = true
+        cell.imgvCurrent.isHidden = true
         return true
     }
     
@@ -189,6 +200,8 @@ extension MainViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDa
         else {
             handleCellSelected(view: cell, cellState: cellState)
         }
+        
+        showMoneyInfo(cell)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {

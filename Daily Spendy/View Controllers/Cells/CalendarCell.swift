@@ -47,7 +47,7 @@ class CalendarCell: JTAppleCell {
     var date = Date()
     var isToday: Bool = false {
         didSet {
-            self.lblDate.textColor = isToday ? .blue : textColor
+            self.viewToday.isHidden = !isToday
         }
     }
     
@@ -59,8 +59,8 @@ class CalendarCell: JTAppleCell {
     // Outlets
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var viewHighlight: UIView!
-    @IBOutlet weak var viewCurrent: UIView!
     @IBOutlet weak var imgvCurrent: UIImageView!
+    @IBOutlet weak var viewToday: UIView!
     
     // Methods 
     func calcMoney() {
@@ -86,7 +86,7 @@ class CalendarCell: JTAppleCell {
                 break
             }
         }
-        end = start - incoming - outgoing
+        end = start + incoming - outgoing
         
         if incoming == 0 && outgoing == 0 {
             state = .none

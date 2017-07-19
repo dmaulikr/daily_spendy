@@ -45,6 +45,7 @@ class SpendyTableViewController: UITableViewController {
         
         let doneAction = UIAlertAction(title: "Xóa", style: .destructive) { (_) in
             SpendyRepo.shared.delete(spendy: spendy)
+            self.dataSource = SpendyRepo.shared.list.filter({ ($0.date! as Date).startOfDate().isEqualDate(self.selectedDate.startOfDate()) })
             self.tableView.reloadData()
         }
         

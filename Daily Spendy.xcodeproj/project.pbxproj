@@ -33,6 +33,9 @@
 		388D5DAA1F1E0E970089DF92 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA21F1E0E970089DF92 /* DropDown+Appearance.swift */; };
 		388D5DAB1F1E0E970089DF92 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA31F1E0E970089DF92 /* DropDown.swift */; };
 		388D5DAC1F1E0E970089DF92 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA41F1E0E970089DF92 /* DropDownCell.swift */; };
+		38A623D61F1F554C00510841 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A623D51F1F554C00510841 /* FilterViewController.swift */; };
+		38A623D81F1F5BF700510841 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A623D71F1F5BF700510841 /* DatePickerDialog.swift */; };
+		38A623DA1F1F5D8C00510841 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A623D91F1F5D8C00510841 /* ReportViewController.swift */; };
 		38AF280E1F1EF9D0001D96D9 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AF280D1F1EF9D0001D96D9 /* NoDataView.xib */; };
 		38AF28101F1F03E9001D96D9 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AF280F1F1F03E9001D96D9 /* Globals.swift */; };
 		38BD0D0A1F1C5759002962B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD0D091F1C5759002962B3 /* MainViewController.swift */; };
@@ -71,6 +74,9 @@
 		388D5DA21F1E0E970089DF92 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
 		388D5DA31F1E0E970089DF92 /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		388D5DA41F1E0E970089DF92 /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
+		38A623D51F1F554C00510841 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		38A623D71F1F5BF700510841 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+		38A623D91F1F5D8C00510841 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		38AF280D1F1EF9D0001D96D9 /* NoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
 		38AF280F1F1F03E9001D96D9 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		38BD0D091F1C5759002962B3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +214,8 @@
 				388D5D8E1F1DDFA80089DF92 /* GroupTableViewController.swift */,
 				388D5D901F1DF92D0089DF92 /* SpendyTableViewController.swift */,
 				388D5D921F1DF94D0089DF92 /* SpendyDetailViewController.swift */,
+				38A623D51F1F554C00510841 /* FilterViewController.swift */,
+				38A623D91F1F5D8C00510841 /* ReportViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 		38BD0D071F1C566C002962B3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				38A623D71F1F5BF700510841 /* DatePickerDialog.swift */,
 				388D5D821F1DC3D50089DF92 /* Extensions.swift */,
 				388D5D8C1F1DDD830089DF92 /* Common.swift */,
 			);
@@ -395,10 +404,13 @@
 				388D5D891F1DD9750089DF92 /* Group.swift in Sources */,
 				383DD3061F1C555600BAEC3A /* AppDelegate.swift in Sources */,
 				383DD30E1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld in Sources */,
+				38A623DA1F1F5D8C00510841 /* ReportViewController.swift in Sources */,
+				38A623D81F1F5BF700510841 /* DatePickerDialog.swift in Sources */,
 				387E1C111F1CB3B800DE76D4 /* SelectMonthTableViewController.swift in Sources */,
 				388D5D951F1DF99F0089DF92 /* SpendyTableViewCell.swift in Sources */,
 				388D5DA51F1E0E970089DF92 /* DPDConstants.swift in Sources */,
 				38AF28101F1F03E9001D96D9 /* Globals.swift in Sources */,
+				38A623D61F1F554C00510841 /* FilterViewController.swift in Sources */,
 				388D5D871F1DC68F0089DF92 /* SpendyRepo.swift in Sources */,
 				38BD0D0D1F1C57F0002962B3 /* CalendarCell.swift in Sources */,
 				388D5D8F1F1DDFA80089DF92 /* GroupTableViewController.swift in Sources */,
