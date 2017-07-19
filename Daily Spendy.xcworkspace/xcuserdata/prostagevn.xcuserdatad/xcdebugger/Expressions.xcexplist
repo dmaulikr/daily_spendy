@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SpendyTableViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:SpendyTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SpendyRepo.shared.list">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MainViewController.(calendar(JTAppleCalendarView, cellForItemAt : Date, cellState : CellState, indexPath : IndexPath) -&gt; JTAppleCell).(closure #1):MainViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -11,7 +19,46 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "SpendyTableViewCell.setData(Spendy) -&gt; ():SpendyTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "spendy.groupID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MainViewController.calendar(JTAppleCalendarView, cellForItemAt : Date, cellState : CellState, indexPath : IndexPath) -&gt; JTAppleCell:MainViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SpendyDetailViewController.loadData() -&gt; ():SpendyDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "GroupRepo.shared.list">
+            </PersistentString>
+            <PersistentString
+               value = "GroupRepo.shared.list[i].id">
+            </PersistentString>
+            <PersistentString
+               value = "selected.groupID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SpendyDetailViewController.save(Any) -&gt; ():SpendyDetailViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SpendyDetailViewController.txtMoneyEditingChanged(Any) -&gt; ():SpendyDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "money">
+            </PersistentString>
+            <PersistentString
+               value = "txtMoney.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SpendyDetailViewController.negative(Any) -&gt; ():SpendyDetailViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

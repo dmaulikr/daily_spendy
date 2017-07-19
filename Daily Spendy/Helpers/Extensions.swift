@@ -84,7 +84,12 @@ extension Int {
     }
     
     func toMoney(_ unit: String = "VNĐ") -> String {
-        let s = self.toString()
+        let isNegative = self < 0
+        var num = self
+        if isNegative {
+            num *= -1
+        }
+        let s = num.toString()
         var s2 = ""
         for i in (0..<s.characters.count).reversed() {
             let index = s.characters.count - 1 - i
@@ -96,7 +101,13 @@ extension Int {
             }
         }
         
-        s2 = s2 + " " + unit
+        if unit != "" {
+            s2 = s2 + " " + unit
+        }
+        
+        if isNegative {
+            s2 = "-" + s2
+        }
         
         return s2
     }
@@ -167,8 +178,8 @@ extension Date
         else {
             let dateStringFormatter = DateFormatter()
             dateStringFormatter.dateFormat = ("dd/MM/yyyy")
-            dateStringFormatter.locale = Locale(identifier: "en_US_POSIX")
-            dateStringFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+            dateStringFormatter.locale = Calendar.current.locale
+            dateStringFormatter.timeZone = Calendar.current.timeZone
             let d = dateStringFormatter.date(from: dateString)!
             self = d
         }
@@ -181,17 +192,22 @@ extension Date
         else {
             let dateStringFormatter = DateFormatter()
             dateStringFormatter.dateFormat = (format)
-//            dateStringFormatter.locale = Locale(identifier: "en_US_POSIX")
-            dateStringFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+            dateStringFormatter.locale = Calendar.current.locale
+            dateStringFormatter.timeZone = Calendar.current.timeZone
             let d = dateStringFormatter.date(from: dateString) ?? Date()
             self = d
         }
     }
     
+    func startOfDate() -> Date {
+        let date = self.toString(withFormat: "ddMMyyyy") + "0000"
+        return Date(dateString: date, format: "ddMMyyyyHHmm")
+    }
+    
     func toString(withFormat format: String = "dd / MM / yyyy") -> String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.locale = Calendar.current.locale
+        formatter.timeZone = Calendar.current.timeZone
         formatter.dateFormat = format
         return formatter.string(from: self)
     }
@@ -261,17 +277,6 @@ extension Date
     
     func getYear() -> Int {
         return (Calendar.current as NSCalendar).component(.year, from: self)
-    }
-    
-    func startDay() -> Date {
-        let calendar = Calendar.current
-        let systemVersion:NSString = UIDevice.current.systemVersion as NSString
-        if systemVersion.floatValue >= 8.0 {
-            return calendar.startOfDay(for: self)
-        } else {
-            let components = (calendar as NSCalendar).components([NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day], from: self)
-            return calendar.date(from: components)!
-        }
     }
 }
 

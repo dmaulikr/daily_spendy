@@ -36,17 +36,24 @@ class SpendyRepo {
     
     func loadData() {
         list.removeAll()
+        do {
+            list = try context.fetch(Spendy.fetchRequest())
+        }
+        catch {
+            print(error.localizedDescription)
+        }
     }
     
-    func insert(name: String, money: Int, groupID: String) {
+    func insert(name: String, money: Int, groupID: String, date: Date) {
         let spendy = Spendy(context: context)
         spendy.id = generateID()
         spendy.name = name
-        spendy.money = Int16(money)
-        spendy.date = NSDate()
+        spendy.money = Int64(money)
+        spendy.date = date as NSDate
         spendy.groupID = groupID
         
-        list.append(spendy)
+        appDelegate.saveContext()
+        loadData()
     }
     
     func update(spendy: Spendy) {

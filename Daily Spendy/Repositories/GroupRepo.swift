@@ -44,7 +44,7 @@ class GroupRepo {
             list = try context.fetch(Group.fetchRequest())
             if list.count == 0 {
                 let general = Group(context: context)
-                general.id = "Ggeneral"
+                general.id = GENERAL_GROUP_ID
                 general.name = "Chung"
                 appDelegate.saveContext()
                 list = try context.fetch(Group.fetchRequest())
@@ -71,6 +71,12 @@ class GroupRepo {
     
     func delete(group: Group) {
         context.delete(group)
+        for item in SpendyRepo.shared.list {
+            if item.groupID == group.id {
+                item.groupID = GENERAL_GROUP_ID
+            }
+        }
+        
         appDelegate.saveContext()
         loadData()
     }

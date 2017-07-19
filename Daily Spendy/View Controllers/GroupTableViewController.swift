@@ -90,7 +90,7 @@ class GroupTableViewController: UITableViewController {
     }
     
     func delete(group: Group) {
-        if group.id == "Ggeneral" {
+        if group.id == GENERAL_GROUP_ID {
             let alert = UIAlertController(title: "Lỗi", message: "Không được xóa nhóm \"Chung\"!", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Biết zòi", style: .default) { (_) in
                 self.tableView.setEditing(false, animated: true)
@@ -125,6 +125,19 @@ class GroupTableViewController: UITableViewController {
 
     // Table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if GroupRepo.shared.list.count == 0 {
+            let view = UIView.loadFromNibNamed("NoDataView")!
+            view.frame = tableView.frame
+            view.tag = 999
+            self.view.addSubview(view)
+        }
+        else {
+            for v in self.view.subviews {
+                if v.tag == 999 {
+                    v.removeFromSuperview()
+                }
+            }
+        }
         return GroupRepo.shared.list.count
     }
     

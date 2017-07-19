@@ -118,6 +118,13 @@ class MainViewController: UIViewController {
         let selectYearTouch = UITapGestureRecognizer(target: self, action: #selector(selectYear))
         lblYear.addGestureRecognizer(selectYearTouch)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        calendarView.reloadData()
+        calendarView.selectDates([selectedDate])
+    }
 }
 
 extension MainViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
@@ -137,7 +144,8 @@ extension MainViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDa
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "calendarCell", for: indexPath) as! CalendarCell
         cell.lblDate.text = cellState.text
         cell.lblDate.textColor = cell.textColor
-        cell.date = date
+        cell.date = date.startOfDate()
+        cell.calcMoney()
         
         if cellState.dateBelongsTo == .thisMonth {
             cell.alpha = 1

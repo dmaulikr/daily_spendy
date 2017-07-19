@@ -7,4 +7,5 @@ target 'Daily Spendy' do
 
   # Pods for Daily Spendy
   pod 'JTAppleCalendar'
+  pod 'IQKeyboardManagerSwift'
 end

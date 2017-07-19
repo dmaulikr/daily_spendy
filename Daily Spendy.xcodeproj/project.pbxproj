@@ -33,6 +33,8 @@
 		388D5DAA1F1E0E970089DF92 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA21F1E0E970089DF92 /* DropDown+Appearance.swift */; };
 		388D5DAB1F1E0E970089DF92 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA31F1E0E970089DF92 /* DropDown.swift */; };
 		388D5DAC1F1E0E970089DF92 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D5DA41F1E0E970089DF92 /* DropDownCell.swift */; };
+		38AF280E1F1EF9D0001D96D9 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AF280D1F1EF9D0001D96D9 /* NoDataView.xib */; };
+		38AF28101F1F03E9001D96D9 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AF280F1F1F03E9001D96D9 /* Globals.swift */; };
 		38BD0D0A1F1C5759002962B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD0D091F1C5759002962B3 /* MainViewController.swift */; };
 		38BD0D0D1F1C57F0002962B3 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD0D0C1F1C57F0002962B3 /* CalendarCell.swift */; };
 		EAB0F3698255FCDF1D8FC0EC /* Pods_Daily_Spendy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECDACFBA535DD2BC1DEE837 /* Pods_Daily_Spendy.framework */; };
@@ -69,6 +71,8 @@
 		388D5DA21F1E0E970089DF92 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
 		388D5DA31F1E0E970089DF92 /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		388D5DA41F1E0E970089DF92 /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
+		38AF280D1F1EF9D0001D96D9 /* NoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
+		38AF280F1F1F03E9001D96D9 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		38BD0D091F1C5759002962B3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		38BD0D0C1F1C57F0002962B3 /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		7E855BB24D75CC7396E7EB3D /* Pods-Daily Spendy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Spendy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Spendy/Pods-Daily Spendy.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 		38BD0D031F1C566C002962B3 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				38AF280D1F1EF9D0001D96D9 /* NoDataView.xib */,
 				383DD3091F1C555600BAEC3A /* Main.storyboard */,
 				383DD3111F1C555600BAEC3A /* LaunchScreen.storyboard */,
 			);
@@ -224,6 +229,7 @@
 				383DD30F1F1C555600BAEC3A /* Assets.xcassets */,
 				383DD3141F1C555600BAEC3A /* Info.plist */,
 				383DD30C1F1C555600BAEC3A /* Daily_Spendy.xcdatamodeld */,
+				38AF280F1F1F03E9001D96D9 /* Globals.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 				388D5D971F1DF9B10089DF92 /* SpendyTableViewCell.xib in Resources */,
 				388D5DA81F1E0E970089DF92 /* Info.plist in Resources */,
 				383DD30B1F1C555600BAEC3A /* Main.storyboard in Resources */,
+				38AF280E1F1EF9D0001D96D9 /* NoDataView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +398,7 @@
 				387E1C111F1CB3B800DE76D4 /* SelectMonthTableViewController.swift in Sources */,
 				388D5D951F1DF99F0089DF92 /* SpendyTableViewCell.swift in Sources */,
 				388D5DA51F1E0E970089DF92 /* DPDConstants.swift in Sources */,
+				38AF28101F1F03E9001D96D9 /* Globals.swift in Sources */,
 				388D5D871F1DC68F0089DF92 /* SpendyRepo.swift in Sources */,
 				38BD0D0D1F1C57F0002962B3 /* CalendarCell.swift in Sources */,
 				388D5D8F1F1DDFA80089DF92 /* GroupTableViewController.swift in Sources */,

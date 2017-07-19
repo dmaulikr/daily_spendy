@@ -24,13 +24,13 @@ class SpendyTableViewCell: UITableViewCell {
         lblGroupName.text = GroupRepo.shared.getByID(spendy.groupID!)!.name
         lblTime.text = (spendy.date! as Date).toString(withFormat: "HH:mm")
         if spendy.money > 0 {
-            lblMoney.textColor = .red
-        }
-        else {
             lblMoney.textColor = .green
         }
+        else {
+            lblMoney.textColor = .red
+        }
         
-        lblMoney.text = "\(spendy.money)"
+        lblMoney.text = Int(spendy.money).toMoney("")
     }
     
     // Cell
