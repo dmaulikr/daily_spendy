@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +21,56 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_bg" translatesAutoresizingMaskIntoConstraints="NO" id="c06-cc-rym">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62T-0j-1Dk">
+                                <rect key="frame" x="84" y="249" width="207.5" height="170"/>
+                                <string key="text">Daily
+Spendy</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money_bag" translatesAutoresizingMaskIntoConstraints="NO" id="Azf-Ez-PCF">
+                                <rect key="frame" x="131" y="136" width="113" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="YO5-rL-ika"/>
+                                    <constraint firstAttribute="width" secondItem="Azf-Ez-PCF" secondAttribute="height" multiplier="1:1" id="YOL-KP-Nz8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTw-5W-3qX">
+                                <rect key="frame" x="110" y="630.5" width="156" height="29"/>
+                                <string key="text">Copyright © 2017 by tqloc. 
+All rights reserved</string>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="vTw-5W-3qX" secondAttribute="bottom" constant="8" id="7wN-YQ-KbI"/>
+                            <constraint firstItem="62T-0j-1Dk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RV4-3o-77t"/>
+                            <constraint firstItem="c06-cc-rym" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="UJ0-5s-I5D"/>
+                            <constraint firstItem="Azf-Ez-PCF" firstAttribute="centerX" secondItem="62T-0j-1Dk" secondAttribute="centerX" id="hvc-cS-NhN"/>
+                            <constraint firstItem="62T-0j-1Dk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hxQ-26-Oe7"/>
+                            <constraint firstItem="c06-cc-rym" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="i36-5r-TsN"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="c06-cc-rym" secondAttribute="bottom" id="l5d-aX-ly1"/>
+                            <constraint firstItem="vTw-5W-3qX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="p45-Ef-aej"/>
+                            <constraint firstAttribute="trailing" secondItem="c06-cc-rym" secondAttribute="trailing" id="wXl-q1-380"/>
+                            <constraint firstItem="62T-0j-1Dk" firstAttribute="top" secondItem="Azf-Ez-PCF" secondAttribute="bottom" id="zi9-JT-uKA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch_screen_bg" width="750" height="1334"/>
+        <image name="money_bag" width="1344" height="1472"/>
+    </resources>
 </document>

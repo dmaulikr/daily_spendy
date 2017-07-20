@@ -25,7 +25,6 @@ extension DropDownCell {
 		super.awakeFromNib()
 		
 		backgroundColor = .clear
-        optionLabel.textAlignment = .center
 	}
 	
 	override open var isSelected: Bool {

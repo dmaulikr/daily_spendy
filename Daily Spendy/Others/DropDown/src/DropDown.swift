@@ -481,7 +481,7 @@ extension DropDown {
 		widthConstraint.constant = layout.width
 		heightConstraint.constant = layout.visibleHeight
 
-		tableView.isScrollEnabled = layout.offscreenHeight > 0
+		tableView.isScrollEnabled = layout.offscreenHeight > 0 || maxHeight > 0
 
 		DispatchQueue.main.async { [unowned self] in
 			self.tableView.flashScrollIndicators()
@@ -612,6 +612,7 @@ extension DropDown {
 		var visibleHeight = tableHeight - layout.offscreenHeight
         if maxHeight > 0 && visibleHeight > maxHeight {
             visibleHeight = maxHeight
+            
         }
 		let canBeDisplayed = visibleHeight >= minHeight
 
